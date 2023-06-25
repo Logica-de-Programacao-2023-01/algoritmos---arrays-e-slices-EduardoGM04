@@ -1,0 +1,17 @@
+package main
+
+import "fmt"
+
+func main() {
+	array := [10]float64{3.2, 6.5, 1.8, 9.3, 4.7, 7.1, 2.9, 5.6, 8.2, 3.9}
+
+		var maioresQue5 []float64
+
+		for _, num := range array {
+		if num > 5 {
+			maioresQue5 = append(maioresQue5, num)
+		}
+	}
+
+		fmt.Println("Novo slice contendo os elementos maiores que 5:", maioresQue5)
+}
