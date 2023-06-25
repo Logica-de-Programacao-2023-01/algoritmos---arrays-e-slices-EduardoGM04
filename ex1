@@ -1,0 +1,15 @@
+package main
+
+import "fmt"
+
+func main() {
+    array := [3]int{2, 4, 6}
+
+      soma := 0
+    for _, valor := range array {
+        soma += valor
+    }
+
+    // Imprimir a soma
+    fmt.Println("A soma dos valores no array é:", soma)
+}
