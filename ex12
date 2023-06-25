@@ -1,0 +1,17 @@
+package main
+
+import "fmt"
+
+func main() {
+	array := [5]int{4, 9, 12, 7, 18}
+
+	var multiplosDeTres []int
+
+	for _, num := range array {
+		if num%3 == 0 {
+			multiplosDeTres = append(multiplosDeTres, num)
+		}
+	}
+
+	fmt.Println("Novo slice contendo os elementos múltiplos de 3:", multiplosDeTres)
+}
