@@ -1,0 +1,14 @@
+package main
+
+import "fmt"
+
+func main() {
+	array := [10]int{2, 5, 8, 10, 15, 20, 25, 30, 35, 40}
+
+	var valor int
+	fmt.Print("Informe um valor: ")
+	fmt.Scanln(&valor)
+
+	encontrado := false
+	for _, elemento := range array {
+		if elemento == valor {
