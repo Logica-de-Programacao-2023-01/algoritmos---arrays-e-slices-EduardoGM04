@@ -1,0 +1,26 @@
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+		matriz := [2][3]int{
+		{1, 2, 3},
+		{4, 5, 6},
+	}
+
+	var linha, coluna int
+	fmt.Print("Informe o índice da linha: ")
+	fmt.Scanln(&linha)
+	fmt.Print("Informe o índice da coluna: ")
+	fmt.Scanln(&coluna)
+
+	if linha < 0 || linha >= len(matriz) || coluna < 0 || coluna >= len(matriz[0]) {
+		fmt.Println("Índices inválidos!")
+		return
+	}
+
+	valor := matriz[linha][coluna]
+	fmt.Printf("O valor armazenado na posição [%d][%d] é %d\n", linha, coluna, valor)
+}
