@@ -1,0 +1,29 @@
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	slice := []string{"valor1", "valor2", "valor3", "valor4", "valor2", "valor5", "valor6", "valor2"}
+
+	fmt.Println("Digite um valor:")
+	var valor string
+	fmt.Scanln(&valor)
+
+	slice = removeOccurrences(slice, valor)
+
+	fmt.Println("Slice resultante:", slice)
+}
+
+func removeOccurrences(slice []string, valor string) []string {
+	result := make([]string, 0)
+
+	for _, item := range slice {
+		if item != valor {
+			result = append(result, item)
+		}
+	}
+
+	return result
+}
