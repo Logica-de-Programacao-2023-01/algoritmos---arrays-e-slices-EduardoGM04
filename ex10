@@ -1,0 +1,34 @@
+package main
+
+import (
+	"fmt"
+	"math/rand"
+)
+
+func main() {
+	slice := make([]int, 10)
+
+		for i := 0; i < len(slice); i++ {
+		slice[i] = rand.Intn(100)
+	}
+
+	fmt.Println("Slice:", slice)
+
+	min := slice[0]
+	for _, value := range slice {
+		if value < min {
+			min = value
+		}
+	}
+
+	max := slice[0]
+	for _, value := range slice {
+		if value > max {
+			max = value
+		}
+	}
+
+	// Imprima o valor mínimo e máximo
+	fmt.Println("Valor mínimo:", min)
+	fmt.Println("Valor máximo:", max)
+}
